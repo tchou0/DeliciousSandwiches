@@ -15,7 +15,7 @@ public class OrderScreen {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println(ColorCodes.ANSI_PINK+"\n=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* Order Screen =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*"+ColorCodes.ANSI_RESET);
+            System.out.println(ColorCodes.ANSI_PINK+"\n*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= Order Screen *=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*="+ColorCodes.ANSI_RESET);
             System.out.println(ColorCodes.TEXT_BLUE+"\n1) Add Sandwich");
             System.out.println("2) Add Drink");
             System.out.println("3) Add Chips");
@@ -324,7 +324,7 @@ public class OrderScreen {
     }
 
     private void checkout() {
-        System.out.println(ColorCodes.TEXT_CYAN+"\n=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* Checkout =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* "+ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.TEXT_CYAN+"\n*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= Checkout =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* "+ColorCodes.ANSI_RESET);
         System.out.println(ColorCodes.ANSI_YELLOW+"Order Details:"+ColorCodes.ANSI_RESET);
 
         // Debugging statements
