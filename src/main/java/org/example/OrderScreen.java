@@ -46,7 +46,7 @@ public class OrderScreen {
                     System.out.println(ColorCodes.TEXT_RED+"Order canceled."+ColorCodes.ANSI_RESET);
                     return;
                 default:
-                    System.out.println(ColorCodes.TEXT_RED+"Invalid choice. Please try again."+ColorCodes.ANSI_RESET);
+                    System.out.println(ColorCodes.TEXT_RED+"\nInvalid choice. Please try again."+ColorCodes.ANSI_RESET);
             }
         }
     }
@@ -90,7 +90,7 @@ public class OrderScreen {
                 breadType = BreadType.WRAP;
                 break;
             default:
-                System.out.println(ColorCodes.TEXT_RED+"Invalid bread choice. Sandwich not added."+ColorCodes.ANSI_RESET);
+                System.out.println(ColorCodes.TEXT_RED+"\nInvalid bread choice. Sandwich not added."+ColorCodes.ANSI_RESET);
                 return;
         }
         Bread bread = new Bread(breadType.getName(), breadType.getPrice());
@@ -107,7 +107,7 @@ public class OrderScreen {
                 sandwichSize = SandwichSize.TWELVE_INCH;
                 break;
             default:
-                System.out.println(ColorCodes.TEXT_RED+"Invalid size choice. Sandwich not added."+ColorCodes.ANSI_RESET);
+                System.out.println(ColorCodes.TEXT_RED+"\nInvalid size choice. Sandwich not added."+ColorCodes.ANSI_RESET);
                 return;
         }
         Sandwich sandwich = new Sandwich(bread, sandwichSize);
@@ -174,7 +174,7 @@ public class OrderScreen {
                     topping = Topping.SWISS_CHEESE;
                     break;
                 default:
-                    System.out.println(ColorCodes.TEXT_RED+"Invalid topping choice: " + toppingName+ColorCodes.ANSI_RESET);
+                    System.out.println(ColorCodes.TEXT_RED+"\nInvalid topping choice: " + toppingName+ColorCodes.ANSI_RESET);
                     continue;
             }
             sandwich.addTopping(topping);
@@ -203,7 +203,7 @@ public class OrderScreen {
                     sauceType = SauceType.VINAIGRETTE;
                     break;
                 default:
-                    System.out.println(ColorCodes.TEXT_RED+"Invalid sauce choice: " + sauceName+ColorCodes.ANSI_RESET);
+                    System.out.println(ColorCodes.TEXT_RED+"\nInvalid sauce choice: " + sauceName+ColorCodes.ANSI_RESET);
                     continue;
             }
             Sauce sauce = new Sauce(sauceType.getName());
@@ -213,7 +213,7 @@ public class OrderScreen {
         // Add the sandwich to the order
         order.addOrderable(sandwich);
 
-        System.out.println(ColorCodes.TEXT_PURPLE+"Sandwich added to the order."+ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.TEXT_PURPLE+"\nSandwich added to the order."+ColorCodes.ANSI_RESET);
     }
 
 
@@ -251,7 +251,7 @@ public class OrderScreen {
                 type = DrinkType.COFFEE;
                 break;
             default:
-                System.out.println(ColorCodes.TEXT_RED+"Invalid type choice. Drink not added."+ColorCodes.ANSI_RESET);
+                System.out.println(ColorCodes.TEXT_RED+"\nInvalid type choice. Drink not added."+ColorCodes.ANSI_RESET);
                 return;
         }
 
@@ -267,7 +267,7 @@ public class OrderScreen {
                 size = DrinkSize.LARGE;
                 break;
             default:
-                System.out.println(ColorCodes.TEXT_RED+"Invalid size choice. Drink not added."+ColorCodes.ANSI_RESET);
+                System.out.println(ColorCodes.TEXT_RED+"\nInvalid size choice. Drink not added."+ColorCodes.ANSI_RESET);
                 return;
         }
 
@@ -276,7 +276,7 @@ public class OrderScreen {
         // Add the drink to the order
         order.addOrderable(drink);
 
-        System.out.println(ColorCodes.TEXT_PURPLE+"Drink added to the order."+ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.TEXT_PURPLE+"\nDrink added to the order."+ColorCodes.ANSI_RESET);
     }
 
 
@@ -312,7 +312,7 @@ public class OrderScreen {
                 chipType = ChipType.SPICY;
                 break;
             default:
-                System.out.println(ColorCodes.TEXT_RED+"Invalid chip choice. Chips not added."+ColorCodes.ANSI_RESET);
+                System.out.println(ColorCodes.TEXT_RED+"\nInvalid chip choice. Chips not added."+ColorCodes.ANSI_RESET);
                 return;
         }
         Chip chips = new Chip(chipType);
@@ -320,12 +320,12 @@ public class OrderScreen {
         // Add the chips to the order
         order.addOrderable(chips);
 
-        System.out.println(ColorCodes.TEXT_PURPLE+"Chips added to the order."+ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.TEXT_PURPLE+"\nChips added to the order."+ColorCodes.ANSI_RESET);
     }
 
     private void checkout() {
         System.out.println(ColorCodes.TEXT_CYAN+"\n=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* Checkout =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* "+ColorCodes.ANSI_RESET);
-        System.out.println(ColorCodes.TEXT_BLUE+"Order Details:"+ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.ANSI_YELLOW+"Order Details:"+ColorCodes.ANSI_RESET);
 
         // Debugging statements
         System.out.println(ColorCodes.TEXT_BLUE+"\nNumber of items in the order: " + order.getItems().size());
@@ -337,7 +337,7 @@ public class OrderScreen {
 
         // Perform any additional checkout logic, such as payment processing or generating a receipt file
 
-        System.out.println("Thank you for your order!"+ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.TEXT_RED+"\nThank you for your order!"+ColorCodes.ANSI_RESET);
 
         String folderPath = "ReceiptsFolder";
         String receiptContent = order.getReceipt(); // Replace with the actual receipt content
