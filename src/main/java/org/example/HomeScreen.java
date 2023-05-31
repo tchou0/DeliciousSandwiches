@@ -7,7 +7,7 @@ public class HomeScreen {
 
         while (true) {
             System.out.println(ColorCodes.ANSI_PINK +"\n=*=*=*=*=*=*=*=*=*=*=*=*=* Welcome to DELI-cious! *=*=*=*=*=*=*=*=*=*=*=*=*=* \n"+ColorCodes.ANSI_RESET);
-            System.out.println(ColorCodes.TEXT_BLUE+"1) Place a New Order");
+            System.out.println(ColorCodes.ORANGE+"1) Place a New Order");
 
             System.out.println("0) Exit"+ColorCodes.ANSI_RESET);
             System.out.print(ColorCodes.ANSI_YELLOW+"\nEnter your choice: "+ColorCodes.ANSI_RESET);
