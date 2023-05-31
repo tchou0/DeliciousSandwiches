@@ -6,10 +6,10 @@ public class HomeScreen {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("Welcome to DELI-cious!");
+            System.out.println("\n=*=*=*=*=*=*=*=*=*=*=*=*=*  Welcome to DELI-cious! *=*=*=*=*=*=*=*=*=*=*=*=*=* ");
             System.out.println("1) Place a New Order");
             System.out.println("0) Exit");
-            System.out.print("Enter your choice: ");
+            System.out.print("\nEnter your choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine();
 
@@ -20,7 +20,7 @@ public class HomeScreen {
                     orderScreen.display();
                     break;
                 case 0:
-                    System.out.println("Exiting the application. Goodbye!");
+                    System.out.println("Exiting the application... Goodbye!");
                     return;
                 default:
                     System.out.println("Invalid choice. Please try again.");

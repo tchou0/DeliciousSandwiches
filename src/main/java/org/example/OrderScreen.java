@@ -15,13 +15,13 @@ public class OrderScreen {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("Order Screen");
-            System.out.println("1) Add Sandwich");
+            System.out.println("\n=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*  Order Screen =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*");
+            System.out.println("\n1) Add Sandwich");
             System.out.println("2) Add Drink");
             System.out.println("3) Add Chips");
             System.out.println("4) Checkout");
             System.out.println("0) Cancel Order");
-            System.out.print("Enter your choice: ");
+            System.out.print("\nEnter your choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine();
 
@@ -324,11 +324,11 @@ public class OrderScreen {
     }
 
     private void checkout() {
-        System.out.println("Checkout");
+        System.out.println("\n=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* Checkout =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* ");
         System.out.println("Order Details:");
 
         // Debugging statements
-        System.out.println("Number of items in the order: " + order.getItems().size());
+        System.out.println("\nNumber of items in the order: " + order.getItems().size());
         for (OrderableItem item : order.getItems()) {
             System.out.println(item.getOrderDetails());
         }
