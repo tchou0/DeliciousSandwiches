@@ -15,13 +15,13 @@ public class OrderScreen {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("\n=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*  Order Screen =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*");
-            System.out.println("\n1) Add Sandwich");
+            System.out.println(ColorCodes.ANSI_PINK+"\n=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* Order Screen =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*"+ColorCodes.ANSI_RESET);
+            System.out.println(ColorCodes.TEXT_BLUE+"\n1) Add Sandwich");
             System.out.println("2) Add Drink");
             System.out.println("3) Add Chips");
             System.out.println("4) Checkout");
-            System.out.println("0) Cancel Order");
-            System.out.print("\nEnter your choice: ");
+            System.out.println("0) Cancel Order"+ColorCodes.ANSI_RESET);
+            System.out.print(ColorCodes.TEXT_YELLOW+"\nEnter your choice: "+ColorCodes.ANSI_RESET);
             int choice = scanner.nextInt();
             scanner.nextLine();
 
@@ -43,10 +43,10 @@ public class OrderScreen {
                     checkout();
                     break;
                 case 0:
-                    System.out.println("Order canceled.");
+                    System.out.println(ColorCodes.TEXT_RED+"Order canceled."+ColorCodes.ANSI_RESET);
                     return;
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println(ColorCodes.TEXT_RED+"Invalid choice. Please try again."+ColorCodes.ANSI_RESET);
             }
         }
     }
@@ -55,12 +55,12 @@ public class OrderScreen {
         Scanner scanner = new Scanner(System.in);
 
         // Prompt the user for sandwich details
-        System.out.println("Add Sandwich");
-        System.out.print("Select bread type (1. White, 2. Wheat, 3. Rye, 4. Wrap): ");
+        System.out.println(ColorCodes.ANSI_BLUE+"Add Sandwich");
+        System.out.println("\nSelect bread type (1. White, 2. Wheat, 3. Rye, 4. Wrap): ");
         int breadChoice = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.print("Enter sandwich size (4, 8, or 12 inches): ");
+        System.out.println("Enter sandwich size (4, 8, or 12 inches): ");
         int sizeChoice = scanner.nextInt();
         scanner.nextLine();
 
@@ -70,7 +70,7 @@ public class OrderScreen {
         String[] toppingsArray = toppingsInput.split(",");
 
         // Prompt the user for sauces
-        System.out.println("Select sauces (separate with comma, e.g., MAYO,MUSTARD): ");
+        System.out.println("Select sauces (separate with comma, e.g., MAYO,MUSTARD): "+ColorCodes.ANSI_RESET);
         String saucesInput = scanner.nextLine();
         String[] saucesArray = saucesInput.split(",");
 
@@ -90,7 +90,7 @@ public class OrderScreen {
                 breadType = BreadType.WRAP;
                 break;
             default:
-                System.out.println("Invalid bread choice. Sandwich not added.");
+                System.out.println(ColorCodes.TEXT_RED+"Invalid bread choice. Sandwich not added."+ColorCodes.ANSI_RESET);
                 return;
         }
         Bread bread = new Bread(breadType.getName(), breadType.getPrice());
@@ -107,7 +107,7 @@ public class OrderScreen {
                 sandwichSize = SandwichSize.TWELVE_INCH;
                 break;
             default:
-                System.out.println("Invalid size choice. Sandwich not added.");
+                System.out.println(ColorCodes.TEXT_RED+"Invalid size choice. Sandwich not added."+ColorCodes.ANSI_RESET);
                 return;
         }
         Sandwich sandwich = new Sandwich(bread, sandwichSize);
@@ -174,7 +174,7 @@ public class OrderScreen {
                     topping = Topping.SWISS_CHEESE;
                     break;
                 default:
-                    System.out.println("Invalid topping choice: " + toppingName);
+                    System.out.println(ColorCodes.TEXT_RED+"Invalid topping choice: " + toppingName+ColorCodes.ANSI_RESET);
                     continue;
             }
             sandwich.addTopping(topping);
@@ -203,7 +203,7 @@ public class OrderScreen {
                     sauceType = SauceType.VINAIGRETTE;
                     break;
                 default:
-                    System.out.println("Invalid sauce choice: " + sauceName);
+                    System.out.println(ColorCodes.TEXT_RED+"Invalid sauce choice: " + sauceName+ColorCodes.ANSI_RESET);
                     continue;
             }
             Sauce sauce = new Sauce(sauceType.getName());
@@ -213,7 +213,7 @@ public class OrderScreen {
         // Add the sandwich to the order
         order.addOrderable(sandwich);
 
-        System.out.println("Sandwich added to the order.");
+        System.out.println(ColorCodes.TEXT_PURPLE+"Sandwich added to the order."+ColorCodes.ANSI_RESET);
     }
 
 
@@ -223,12 +223,12 @@ public class OrderScreen {
         Scanner scanner = new Scanner(System.in);
 
         // Prompt the user for drink details
-        System.out.println("Add Drink");
-        System.out.print("Select drink type (1. Soda, 2. Water, 3. Juice, 4. Tea, 5. Coffee): ");
+        System.out.println(ColorCodes.TEXT_CYAN+"Add Drink");
+        System.out.println("\nSelect drink type (1. Soda, 2. Water, 3. Juice, 4. Tea, 5. Coffee): ");
         int typeChoice = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.print("Select drink size (1. Small, 2. Medium, 3. Large): ");
+        System.out.println("Select drink size (1. Small, 2. Medium, 3. Large): ");
         int sizeChoice = scanner.nextInt();
         scanner.nextLine();
 
@@ -251,7 +251,7 @@ public class OrderScreen {
                 type = DrinkType.COFFEE;
                 break;
             default:
-                System.out.println("Invalid type choice. Drink not added.");
+                System.out.println(ColorCodes.TEXT_RED+"Invalid type choice. Drink not added."+ColorCodes.ANSI_RESET);
                 return;
         }
 
@@ -267,7 +267,7 @@ public class OrderScreen {
                 size = DrinkSize.LARGE;
                 break;
             default:
-                System.out.println("Invalid size choice. Drink not added.");
+                System.out.println(ColorCodes.TEXT_RED+"Invalid size choice. Drink not added."+ColorCodes.ANSI_RESET);
                 return;
         }
 
@@ -276,7 +276,7 @@ public class OrderScreen {
         // Add the drink to the order
         order.addOrderable(drink);
 
-        System.out.println("Drink added to the order.");
+        System.out.println(ColorCodes.TEXT_PURPLE+"Drink added to the order."+ColorCodes.ANSI_RESET);
     }
 
 
@@ -285,8 +285,8 @@ public class OrderScreen {
         Scanner scanner = new Scanner(System.in);
 
         // Prompt the user for chip details
-        System.out.println("Add Chips");
-        System.out.print("Select chip type (1. Regular, 2. BBQ, 3. Sour Cream & Onion, 4. Salted, 5. Cheese, 6. Spicy): ");
+        System.out.println(ColorCodes.ANSI_PINK+"Add Chips");
+        System.out.println("\nSelect chip type (1. Regular, 2. BBQ, 3. Sour Cream & Onion, 4. Salted, 5. Cheese, 6. Spicy): ");
         int chipChoice = scanner.nextInt();
         scanner.nextLine();
 
@@ -312,7 +312,7 @@ public class OrderScreen {
                 chipType = ChipType.SPICY;
                 break;
             default:
-                System.out.println("Invalid chip choice. Chips not added.");
+                System.out.println(ColorCodes.TEXT_RED+"Invalid chip choice. Chips not added."+ColorCodes.ANSI_RESET);
                 return;
         }
         Chip chips = new Chip(chipType);
@@ -320,15 +320,15 @@ public class OrderScreen {
         // Add the chips to the order
         order.addOrderable(chips);
 
-        System.out.println("Chips added to the order.");
+        System.out.println(ColorCodes.TEXT_PURPLE+"Chips added to the order."+ColorCodes.ANSI_RESET);
     }
 
     private void checkout() {
-        System.out.println("\n=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* Checkout =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* ");
-        System.out.println("Order Details:");
+        System.out.println(ColorCodes.TEXT_CYAN+"\n=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* Checkout =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* "+ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.TEXT_BLUE+"Order Details:"+ColorCodes.ANSI_RESET);
 
         // Debugging statements
-        System.out.println("\nNumber of items in the order: " + order.getItems().size());
+        System.out.println(ColorCodes.TEXT_BLUE+"\nNumber of items in the order: " + order.getItems().size());
         for (OrderableItem item : order.getItems()) {
             System.out.println(item.getOrderDetails());
         }
@@ -337,7 +337,7 @@ public class OrderScreen {
 
         // Perform any additional checkout logic, such as payment processing or generating a receipt file
 
-        System.out.println("Thank you for your order!");
+        System.out.println("Thank you for your order!"+ColorCodes.ANSI_RESET);
 
         String folderPath = "ReceiptsFolder";
         String receiptContent = order.getReceipt(); // Replace with the actual receipt content

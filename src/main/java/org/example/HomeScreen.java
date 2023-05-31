@@ -6,10 +6,11 @@ public class HomeScreen {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("\n=*=*=*=*=*=*=*=*=*=*=*=*=*  Welcome to DELI-cious! *=*=*=*=*=*=*=*=*=*=*=*=*=* ");
-            System.out.println("1) Place a New Order");
-            System.out.println("0) Exit");
-            System.out.print("\nEnter your choice: ");
+            System.out.println(ColorCodes.ANSI_PINK +"\n=*=*=*=*=*=*=*=*=*=*=*=*=* Welcome to DELI-cious! *=*=*=*=*=*=*=*=*=*=*=*=*=* \n"+ColorCodes.ANSI_RESET);
+            System.out.println(ColorCodes.TEXT_BLUE+"1) Place a New Order");
+
+            System.out.println("0) Exit"+ColorCodes.ANSI_RESET);
+            System.out.print(ColorCodes.ANSI_YELLOW+"\nEnter your choice: "+ColorCodes.ANSI_RESET);
             int choice = scanner.nextInt();
             scanner.nextLine();
 
@@ -20,10 +21,10 @@ public class HomeScreen {
                     orderScreen.display();
                     break;
                 case 0:
-                    System.out.println("Exiting the application... Goodbye!");
+                    System.out.println(ColorCodes.TEXT_RED+"Exiting the application... Goodbye!"+ColorCodes.ANSI_RESET);
                     return;
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println(ColorCodes.TEXT_RED+"Invalid choice. Please try again."+ColorCodes.ANSI_RESET);
             }
         }
     }
