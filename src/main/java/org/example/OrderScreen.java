@@ -328,7 +328,7 @@ public class OrderScreen {
         System.out.println(ColorCodes.ANSI_YELLOW+"Order Details:"+ColorCodes.ANSI_RESET);
 
         // Debugging statements
-        System.out.println(ColorCodes.TEXT_BLUE+"\nNumber of items in the order: " + order.getItems().size());
+        System.out.println(ColorCodes.TEXT_YELLOW+"\nNumber of items in the order: " + order.getItems().size());
         for (OrderableItem item : order.getItems()) {
             System.out.println(item.getOrderDetails());
         }
