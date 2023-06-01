@@ -373,21 +373,21 @@ public class OrderScreen {
 
 
 
-//        if (confirmation.equalsIgnoreCase("Y")) {
-//            String folderPath = "ReceiptsFolder";
-//            String receiptContent = order.getReceipt(); // Replace with the actual receipt content
-//
-//            ReceiptManager receiptManager = new ReceiptManager(folderPath);
-//            receiptManager.createReceipt(receiptContent);
-//
-//            // Clear the order for the next transaction
-//            order.clear();
-//
-//            // Checkout successful
-//        } else {
-//            System.out.println("Order canceled.");
-//            return false; // Checkout canceled
-//        }
-//        return true;
+        if (confirmation.equalsIgnoreCase("Y")) {
+            String folderPath = "ReceiptsFolder";
+            String receiptContent = order.getReceipt(); // Replace with the actual receipt content
+
+            ReceiptManager receiptManager = new ReceiptManager(folderPath);
+            receiptManager.createReceipt(receiptContent);
+
+            // Clear the order for the next transaction
+            order.clear();
+
+            // Checkout successful
+        } else {
+            System.out.println("Order canceled.");
+            return false; // Checkout canceled
+        }
+        return true;
     }
 }
