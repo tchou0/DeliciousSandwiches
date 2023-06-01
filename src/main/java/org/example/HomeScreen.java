@@ -23,24 +23,24 @@ public class HomeScreen {
 
                     if (order.getItems().isEmpty()) {
                         // No items in the order, go back to the Home Screen
-                        System.out.println("Order canceled or no items added. Returning to Home Screen.");
+                        System.out.println(ColorCodes.GREEN+"Order canceled or no items added. Returning to Home Screen."+ColorCodes.ANSI_RESET);
                         break;
                     }
 
-                    boolean checkoutSuccessful = OrderScreen.checkout();
+                    boolean checkoutSuccessful = orderScreen.checkout();
                     if (checkoutSuccessful) {
                         // Continue the loop and show the Home Screen
                         break;
                     } else {
                         // Exit the application
-                        System.out.println("Exiting the application. Goodbye!");
+                        System.out.println(ColorCodes.GREEN+"Exiting the application. Goodbye!"+ColorCodes.ANSI_RESET);
                         return;
                     }
                 case 0:
-                    System.out.println(ColorCodes.TEXT_RED+"Exiting the application... Goodbye!"+ColorCodes.ANSI_RESET);
+                    System.out.println(ColorCodes.GREEN+"Exiting the application... Goodbye!"+ColorCodes.ANSI_RESET);
                     return;
                 default:
-                    System.out.println(ColorCodes.TEXT_RED+"Invalid choice. Please try again."+ColorCodes.ANSI_RESET);
+                    System.out.println(ColorCodes.GREEN+"Invalid choice. Please try again."+ColorCodes.ANSI_RESET);
             }
         }
     }

@@ -40,11 +40,11 @@ public class OrderScreen {
                     // Call the method to proceed to checkout
                         checkout();
                 case 5 -> {
-                    System.out.println(ColorCodes.TEXT_RED + "Returning to Home Screen..." + ColorCodes.ANSI_RESET);
+                    System.out.println(ColorCodes.GREEN + "Returning to Home Screen..." + ColorCodes.ANSI_RESET);
                     return; // Return to Home Screen
                 }
                 case 0 -> {
-                    System.out.println(ColorCodes.TEXT_RED + "Order canceled." + ColorCodes.ANSI_RESET);
+                    System.out.println(ColorCodes.GREEN + "Order canceled." + ColorCodes.ANSI_RESET);
                     return; // Cancel Order
                 }
                 default ->
@@ -319,7 +319,7 @@ public class OrderScreen {
         Scanner scanner = new Scanner(System.in);
 
         // Prompt the user for chip details
-        System.out.println(ColorCodes.TEXT_PURPLE + "Add Chips\n"+ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.TEXT_PURPLE + "Add Chips"+ColorCodes.ANSI_RESET);
         System.out.println(ColorCodes.TEXT_CYAN+"\nSelect chip type:\n" +ColorCodes.ANSI_RESET+ColorCodes.ANSI_YELLOW+
                 "1. Regular\n" +
                 "2. BBQ\n"+
@@ -369,7 +369,7 @@ public class OrderScreen {
         System.out.print(ColorCodes.TEXT_PURPLE+"Confirm your order (Y/N): "+ColorCodes.ANSI_RESET);
         String confirmation = scanner.nextLine();
 
-        System.out.println(ColorCodes.TEXT_RED + "\nThank you for your order!" + ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.GREEN + "\nThank you for your order!" + ColorCodes.ANSI_RESET);
 
 
 
@@ -385,7 +385,7 @@ public class OrderScreen {
 
             // Checkout successful
         } else {
-            System.out.println("Order canceled.");
+            System.out.println(ColorCodes.ORANGE+"Order canceled."+ColorCodes.ANSI_RESET);
             return false; // Checkout canceled
         }
         return true;
