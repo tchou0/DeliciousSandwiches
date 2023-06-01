@@ -100,7 +100,7 @@ public class OrderScreen {
                 "- AMERICAN CHEESE\n" +
                 "- PROVOLONE CHEESE\n" +
                 "- CHEDDAR CHEESE\n" +
-                "- SWISS CHEESE\n");
+                "- SWISS CHEESE");
 
         String toppingsInput = scanner.nextLine();
         String[] toppingsArray = toppingsInput.split(",");
@@ -365,15 +365,29 @@ public class OrderScreen {
         System.out.printf("Total Price: $%.2f%n", order.getTotalPrice());
 
         // Perform any additional checkout logic, such as payment processing or generating a receipt file
+        Scanner scanner = new Scanner(System.in);
+        System.out.print(ColorCodes.TEXT_PURPLE+"Confirm your order (Y/N): "+ColorCodes.ANSI_RESET);
+        String confirmation = scanner.nextLine();
 
         System.out.println(ColorCodes.TEXT_RED + "\nThank you for your order!" + ColorCodes.ANSI_RESET);
 
-        String folderPath = "ReceiptsFolder";
-        String receiptContent = order.getReceipt(); // Replace with the actual receipt content
 
-        ReceiptManager receiptManager = new ReceiptManager(folderPath);
-        receiptManager.createReceipt(receiptContent);
 
-        System.exit(0);
+//        if (confirmation.equalsIgnoreCase("Y")) {
+//            String folderPath = "ReceiptsFolder";
+//            String receiptContent = order.getReceipt(); // Replace with the actual receipt content
+//
+//            ReceiptManager receiptManager = new ReceiptManager(folderPath);
+//            receiptManager.createReceipt(receiptContent);
+//
+//            // Clear the order for the next transaction
+//            order.clear();
+//
+//            // Checkout successful
+//        } else {
+//            System.out.println("Order canceled.");
+//            return false; // Checkout canceled
+//        }
+//        return true;
     }
 }
