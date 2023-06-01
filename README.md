@@ -63,7 +63,7 @@ The checkout screen displays the order details, including the list of sandwiches
 
 ### One interesting of piece code from the project :
         // public static final String TEXT_PURPLE = "\u001B[35m";
-This code is interesting because it helps us to make the project look better.
+This code is interesting as it significantly enhances the appearance of our project by changing the color of the code to purple
 
 How to Run the Application
 Clone the repository: https://github.com/mahmed90851/DeliciousSandwiches.git
