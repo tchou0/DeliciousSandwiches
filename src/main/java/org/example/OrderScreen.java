@@ -259,12 +259,20 @@ public class OrderScreen {
         Scanner scanner = new Scanner(System.in);
 
         // Prompt the user for drink details
-        System.out.println(ColorCodes.TEXT_CYAN + "Add Drink");
-        System.out.println("\nSelect drink type (1. Soda, 2. Water, 3. Juice, 4. Tea, 5. Coffee): ");
+        System.out.println(ColorCodes.TEXT_PURPLE+ "Add Drink"+ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.TEXT_CYAN+"\nSelect drink type:\n" +ColorCodes.ANSI_RESET+ColorCodes.ANSI_YELLOW+
+                "1. Soda\n" +
+                "2. Water\n" +
+                "3. Juice\n" +
+                "4. Tea\n" +
+                "5. Coffee"+ColorCodes.ANSI_RESET);
         int typeChoice = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.println("Select drink size (1. Small, 2. Medium, 3. Large): ");
+        System.out.println(ColorCodes.TEXT_CYAN+"Select drink size:\n" +ColorCodes.ANSI_RESET+ColorCodes.ANSI_YELLOW+
+                "1. Small\n" +
+                "2. Medium\n" +
+                "3. Large"+ColorCodes.ANSI_RESET);
         int sizeChoice = scanner.nextInt();
         scanner.nextLine();
 

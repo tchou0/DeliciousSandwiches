@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3292681e-fe85-4824-b3d7-1b8d05f60ae8" name="Changes" comment="updated code">
-      <change afterPath="$PROJECT_DIR$/src/main/java/FinalVersion/HomeScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FinalVersion/OrderScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ColorCodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalVersion/ColorCodes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HomeScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/OrderScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/OrderScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SauceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SauceType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Topping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Topping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/ColorCodes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/HomeScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/HomeScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/OrderScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SauceType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SauceType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Topping.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Topping.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,20 +48,21 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/touchou/Desktop/DeliciousSandwiches&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/touchou/Desktop/DeliciousSandwiches"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="DeliciousSandwiches" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="FinalVersion.*" />
+          <option name="PATTERN" value="org.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -165,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685572940046</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="updated code">
+      <created>1685639398367</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1685639398367</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -188,32 +192,32 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/OrderScreen.java</url>
-          <line>139</line>
+          <line>137</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/OrderScreen.java</url>
-          <line>161</line>
+          <line>159</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/OrderScreen.java</url>
-          <line>210</line>
+          <line>208</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/OrderScreen.java</url>
-          <line>216</line>
+          <line>214</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/OrderScreen.java</url>
-          <line>228</line>
+          <line>226</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/OrderScreen.java</url>
-          <line>255</line>
+          <line>253</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
