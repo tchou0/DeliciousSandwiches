@@ -7,10 +7,6 @@
     <list default="true" id="3292681e-fe85-4824-b3d7-1b8d05f60ae8" name="Changes" comment="updated code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/OrderScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/OrderScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/HomeScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/HomeScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/OrderScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SauceType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SauceType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Topping.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Topping.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +165,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685639398367</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="updated code">
+      <created>1685640407136</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1685640407136</updated>
+    </task>
+    <task id="LOCAL-00014" summary="updated code">
+      <created>1685640421989</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1685640421989</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,6 +229,20 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/OrderScreen.java</url>
           <line>253</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/OrderScreen.java</url>
+          <line>346</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/OrderScreen.java</url>
+          <line>317</line>
+          <properties class="org.example.OrderScreen" method="addChips">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

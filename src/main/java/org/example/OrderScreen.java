@@ -279,24 +279,15 @@ public class OrderScreen {
         // Create a new Drink object
         DrinkType type;
         switch (typeChoice) {
-            case 1:
-                type = DrinkType.SODA;
-                break;
-            case 2:
-                type = DrinkType.WATER;
-                break;
-            case 3:
-                type = DrinkType.JUICE;
-                break;
-            case 4:
-                type = DrinkType.TEA;
-                break;
-            case 5:
-                type = DrinkType.COFFEE;
-                break;
-            default:
+            case 1 -> type = DrinkType.SODA;
+            case 2 -> type = DrinkType.WATER;
+            case 3 -> type = DrinkType.JUICE;
+            case 4 -> type = DrinkType.TEA;
+            case 5 -> type = DrinkType.COFFEE;
+            default -> {
                 System.out.println(ColorCodes.TEXT_RED + "\nInvalid type choice. Drink not added." + ColorCodes.ANSI_RESET);
                 return;
+            }
         }
 
         DrinkSize size;
@@ -328,35 +319,30 @@ public class OrderScreen {
         Scanner scanner = new Scanner(System.in);
 
         // Prompt the user for chip details
-        System.out.println(ColorCodes.ANSI_PINK + "Add Chips");
-        System.out.println("\nSelect chip type (1. Regular, 2. BBQ, 3. Sour Cream & Onion, 4. Salted, 5. Cheese, 6. Spicy): ");
+        System.out.println(ColorCodes.TEXT_PURPLE + "Add Chips\n"+ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.TEXT_CYAN+"\nSelect chip type:\n" +ColorCodes.ANSI_RESET+ColorCodes.ANSI_YELLOW+
+                "1. Regular\n" +
+                "2. BBQ\n"+
+                "3. Sour Cream & Onion\n" +
+                "4. Salted\n" +
+                "5. Cheese\n" +
+                "6. Spicy"+ColorCodes.ANSI_RESET);
         int chipChoice = scanner.nextInt();
         scanner.nextLine();
 
         // Create a new Chips object
         ChipType chipType;
         switch (chipChoice) {
-            case 1:
-                chipType = ChipType.REGULAR;
-                break;
-            case 2:
-                chipType = ChipType.BBQ;
-                break;
-            case 3:
-                chipType = ChipType.SOUR_CREAM_AND_ONION;
-                break;
-            case 4:
-                chipType = ChipType.SALTED;
-                break;
-            case 5:
-                chipType = ChipType.CHEESE;
-                break;
-            case 6:
-                chipType = ChipType.SPICY;
-                break;
-            default:
+            case 1 -> chipType = ChipType.REGULAR;
+            case 2 -> chipType = ChipType.BBQ;
+            case 3 -> chipType = ChipType.SOUR_CREAM_AND_ONION;
+            case 4 -> chipType = ChipType.SALTED;
+            case 5 -> chipType = ChipType.CHEESE;
+            case 6 -> chipType = ChipType.SPICY;
+            default -> {
                 System.out.println(ColorCodes.TEXT_RED + "\nInvalid chip choice. Chips not added." + ColorCodes.ANSI_RESET);
                 return;
+            }
         }
         Chip chips = new Chip(chipType);
 
