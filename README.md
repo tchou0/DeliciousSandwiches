@@ -14,11 +14,11 @@ Additionally, customers can specify if they want their sandwich toasted and add 
 
 The application aims to improve efficiency and enhance the customer experience at DELI-cious by automating the order process and ensuring accurate customization of sandwiches.
 
-### Home Screen 
+### Home Screen
 The home screen provides the following options:
 
- - Place a new order: Start a new order
- - Exit: Exit the Application
+- Place a new order: Start a new order
+- Exit: Exit the Application
 
 The application continues to run until the user chooses to exit.
 
@@ -31,7 +31,7 @@ The order screen displays the entries in reverse chronological order (newest ent
 - Checkout: Proceed to the checkout screen.
 - Return to Home Screen.
 - Cancel Order: Delete the current order and go back to the home screen.
-![Screen Shot 2023-06-01 at 3.34.10 PM.png](Screen%20Shot%202023-06-01%20at%203.34.10%20PM.png)
+  ![Screen Shot 2023-06-01 at 3.34.10 PM.png](Screen%20Shot%202023-06-01%20at%203.34.10%20PM.png)
 ### Sandwich Screen
 The add sandwich screen guides the user through the process of creating a customized sandwich. The following options are available:
 
@@ -68,7 +68,7 @@ This code is interesting because it helps us to make the project look better.
 How to Run the Application
 Clone the repository: https://github.com/mahmed90851/DeliciousSandwiches.git
 
-Run the application: IntelliJ 
+Run the application: IntelliJ
 
 ## Acknowledgments
 We would like to express our gratitude to the following contributors for their work on this project:
