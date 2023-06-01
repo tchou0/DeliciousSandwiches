@@ -15,38 +15,40 @@ public class OrderScreen {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println(ColorCodes.ANSI_PINK+"\n*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= Order Screen *=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*="+ColorCodes.ANSI_RESET);
-            System.out.println(ColorCodes.TEXT_BLUE+"\n1) Add Sandwich");
+            System.out.println(ColorCodes.ANSI_PINK + "\n*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= Order Screen *=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=" + ColorCodes.ANSI_RESET);
+            System.out.println(ColorCodes.TEXT_BLUE + "\n1) Add Sandwich");
             System.out.println("2) Add Drink");
             System.out.println("3) Add Chips");
             System.out.println("4) Checkout");
-            System.out.println("0) Cancel Order"+ColorCodes.ANSI_RESET);
-            System.out.print(ColorCodes.TEXT_YELLOW+"\nEnter your choice: "+ColorCodes.ANSI_RESET);
+            System.out.println("5) Return to Home Screen");
+            System.out.println("0) Cancel Order" + ColorCodes.ANSI_RESET);
+            System.out.print(ColorCodes.TEXT_YELLOW + "\nEnter your choice: " + ColorCodes.ANSI_RESET);
             int choice = scanner.nextInt();
             scanner.nextLine();
 
             switch (choice) {
-                case 1:
+                case 1 ->
                     // Call the method to add a sandwich to the order
-                    addSandwich();
-                    break;
-                case 2:
+                        addSandwich();
+                case 2 ->
                     // Call the method to add a drink to the order
-                    addDrink();
-                    break;
-                case 3:
+                        addDrink();
+                case 3 ->
                     // Call the method to add chips to the order
-                    addChips();
-                    break;
-                case 4:
+                        addChips();
+                case 4 ->
                     // Call the method to proceed to checkout
-                    checkout();
-                    break;
-                case 0:
-                    System.out.println(ColorCodes.TEXT_RED+"Order canceled."+ColorCodes.ANSI_RESET);
-                    return;
-                default:
-                    System.out.println(ColorCodes.TEXT_RED+"\nInvalid choice. Please try again."+ColorCodes.ANSI_RESET);
+                        checkout();
+                case 5 -> {
+                    System.out.println(ColorCodes.TEXT_RED + "Returning to Home Screen..." + ColorCodes.ANSI_RESET);
+                    return; // Return to Home Screen
+                }
+                case 0 -> {
+                    System.out.println(ColorCodes.TEXT_RED + "Order canceled." + ColorCodes.ANSI_RESET);
+                    return; // Cancel Order
+                }
+                default ->
+                        System.out.println(ColorCodes.TEXT_RED + "Invalid choice. Please try again." + ColorCodes.ANSI_RESET);
             }
         }
     }
@@ -55,127 +57,140 @@ public class OrderScreen {
         Scanner scanner = new Scanner(System.in);
 
         // Prompt the user for sandwich details
-        System.out.println(ColorCodes.ANSI_BLUE+"Add Sandwich");
-        System.out.println("\nSelect bread type (1. White, 2. Wheat, 3. Rye, 4. Wrap): ");
+        System.out.println(ColorCodes.TEXT_PURPLE + "Add Sandwich" + ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.ANSI_PINK + "\nSelect bread type :\n" + ColorCodes.ANSI_RESET + ColorCodes.ANSI_BLUE +
+                "(Only type the number)\n" + ColorCodes.ANSI_YELLOW +
+                "1. White\n" +
+                "2. Wheat\n" +
+                "3. Rye\n" +
+                "4. Wrap\n" + ColorCodes.ANSI_RESET);
         int breadChoice = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.println("Enter sandwich size (4, 8, or 12 inches): ");
+        System.out.println(ColorCodes.ANSI_PINK + "Enter sandwich size:\n" +
+                "(4, 8, or 12 inches): ");
         int sizeChoice = scanner.nextInt();
         scanner.nextLine();
 
         // Prompt the user for toppings
-        System.out.println("Select toppings (separate with comma, e.g., LETTUCE,TOMATOES): ");
+        System.out.println("\nSelect Toppings:\n" + "(Separate with comma,)" + ColorCodes.ANSI_RESET);
+        System.out.print(ColorCodes.TEXT_PURPLE + "*+*+* VEGETABLE *+*+*\n" + ColorCodes.ANSI_RESET);
+        System.out.print(ColorCodes.ANSI_YELLOW +
+                "- LETTUCE\n" +
+                "- PEPPERS\n" +
+                "- ONIONS\n" +
+                "- TOMATOES\n" +
+                "- JALEPENOS\n" +
+                "- CUCUMBERS\n" +
+                "- PICKLES\n" +
+                "- GUACAMOLE\n" +
+                "- MUSHROOMS\n" + ColorCodes.ANSI_RESET);
+
+        System.out.println(ColorCodes.TEXT_PURPLE + "\n*+*+*+ MEAT +*+*+*" + ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.ANSI_YELLOW +
+                "- STEAK\n" +
+                "- HAM\n" +
+                "- SALAMI\n" +
+                "- ROAST BEEF\n" +
+                "- CHICKEN\n"+
+                "- BACON\n");
+
+        System.out.println(ColorCodes.TEXT_PURPLE + "*+*+*+ CHEESE +*+*+*" + ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.ANSI_YELLOW +
+                "- AMERICAN CHEESE\n" +
+                "- PROVOLONE CHEESE\n" +
+                "- CHEDDAR CHEESE\n" +
+                "- SWISS CHEESE\n");
+
         String toppingsInput = scanner.nextLine();
         String[] toppingsArray = toppingsInput.split(",");
 
         // Prompt the user for sauces
-        System.out.println("Select sauces (separate with comma, e.g., MAYO,MUSTARD): "+ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.ANSI_PINK + "\nSelect sauces:\n" +
+                "(Separate with comma,)\n" + ColorCodes.ANSI_RESET + ColorCodes.ANSI_YELLOW +
+                "- MAYO\n" +
+                "- MUSTARD\n" +
+                "- KETCHUP\n" +
+                "- RANCH\n" +
+                "- THOUSAND ISLANDS\n" +
+                "- VINAIGRETTE" + ColorCodes.ANSI_RESET);
         String saucesInput = scanner.nextLine();
         String[] saucesArray = saucesInput.split(",");
+
+        // Prompt the user if they want the sandwich toasted
+        System.out.print(ColorCodes.TEXT_PURPLE + "\nDo you want the sandwich toasted? (Yes/No): ");
+        String toastedChoice = scanner.nextLine();
+        boolean toasted = toastedChoice.equalsIgnoreCase("yes");
+
+        // Prompt the user if they want extra cheese
+        System.out.print("\nDo you want extra cheese? (Yes/No): ");
+        String extraCheeseChoice = scanner.nextLine();
+        boolean extraCheese = extraCheeseChoice.equalsIgnoreCase("yes");
+
+        // Prompt the user if they want extra meat
+        System.out.print("\nDo you want extra meat? (Yes/No): ");
+        String extraMeatChoice = scanner.nextLine();
+        boolean extraMeat = extraMeatChoice.equalsIgnoreCase("yes");
+
+        // Prompt the user if they want to add sides
+        System.out.print("\nDo you want to add sides? (Yes/No): " + ColorCodes.ANSI_RESET);
+        String addSidesChoice = scanner.nextLine();
+        boolean addSides = addSidesChoice.equalsIgnoreCase("yes");
 
         // Create a new Sandwich object
         BreadType breadType;
         switch (breadChoice) {
-            case 1:
-                breadType = BreadType.WHITE;
-                break;
-            case 2:
-                breadType = BreadType.WHEAT;
-                break;
-            case 3:
-                breadType = BreadType.RYE;
-                break;
-            case 4:
-                breadType = BreadType.WRAP;
-                break;
-            default:
-                System.out.println(ColorCodes.TEXT_RED+"\nInvalid bread choice. Sandwich not added."+ColorCodes.ANSI_RESET);
+            case 1 -> breadType = BreadType.WHITE;
+            case 2 -> breadType = BreadType.WHEAT;
+            case 3 -> breadType = BreadType.RYE;
+            case 4 -> breadType = BreadType.WRAP;
+            default -> {
+                System.out.println(ColorCodes.TEXT_RED + "\nInvalid bread choice. Sandwich not added." + ColorCodes.ANSI_RESET);
                 return;
+            }
         }
         Bread bread = new Bread(breadType.getName(), breadType.getPrice());
 
         SandwichSize sandwichSize;
         switch (sizeChoice) {
-            case 4:
-                sandwichSize = SandwichSize.FOUR_INCH;
-                break;
-            case 8:
-                sandwichSize = SandwichSize.EIGHT_INCH;
-                break;
-            case 12:
-                sandwichSize = SandwichSize.TWELVE_INCH;
-                break;
-            default:
-                System.out.println(ColorCodes.TEXT_RED+"\nInvalid size choice. Sandwich not added."+ColorCodes.ANSI_RESET);
+            case 4 -> sandwichSize = SandwichSize.FOUR_INCH;
+            case 8 -> sandwichSize = SandwichSize.EIGHT_INCH;
+            case 12 -> sandwichSize = SandwichSize.TWELVE_INCH;
+            default -> {
+                System.out.println(ColorCodes.TEXT_RED + "\nInvalid size choice. Sandwich not added." + ColorCodes.ANSI_RESET);
                 return;
+            }
         }
         Sandwich sandwich = new Sandwich(bread, sandwichSize);
+        sandwich.setToasted(toasted);
 
         // Add toppings to the sandwich
         for (String toppingName : toppingsArray) {
             Topping topping;
             switch (toppingName.toUpperCase()) {
-                case "LETTUCE":
-                    topping = Topping.LETTUCE;
-                    break;
-                case "PEPPERS":
-                    topping = Topping.PEPPERS;
-                    break;
-                case "ONIONS":
-                    topping = Topping.ONIONS;
-                    break;
-                case "TOMATOES":
-                    topping = Topping.TOMATOES;
-                    break;
-                case "JALEPENOS":
-                    topping = Topping.JALEPENOS;
-                    break;
-                case "CUCUMBERS":
-                    topping = Topping.CUCUMBERS;
-                    break;
-                case "PICKLES":
-                    topping = Topping.PICKLES;
-                    break;
-                case "GUACAMOLE":
-                    topping = Topping.GUACAMOLE;
-                    break;
-                case "MUSHROOMS":
-                    topping = Topping.MUSHROOMS;
-                    break;
-                case "STEAK":
-                    topping = Topping.STEAK;
-                    break;
-                case "HAM":
-                    topping = Topping.HAM;
-                    break;
-                case "SALAMI":
-                    topping = Topping.SALAMI;
-                    break;
-                case "ROAST BEEF":
-                    topping = Topping.ROAST_BEEF;
-                    break;
-                case "CHICKEN":
-                    topping = Topping.CHICKEN;
-                    break;
-                case "BACON":
-                    topping = Topping.BACON;
-                    break;
-                case "AMERICAN CHEESE":
-                    topping = Topping.AMERICAN_CHEESE;
-                    break;
-                case "PROVOLONE CHEESE":
-                    topping = Topping.PROVOLONE_CHEESE;
-                    break;
-                case "CHEDDAR CHEESE":
-                    topping = Topping.CHEDDAR_CHEESE;
-                    break;
-                case "SWISS CHEESE":
-                    topping = Topping.SWISS_CHEESE;
-                    break;
-                default:
-                    System.out.println(ColorCodes.TEXT_RED+"\nInvalid topping choice: " + toppingName+ColorCodes.ANSI_RESET);
+                case "LETTUCE" -> topping = Topping.LETTUCE;
+                case "PEPPERS" -> topping = Topping.PEPPERS;
+                case "ONIONS" -> topping = Topping.ONIONS;
+                case "TOMATOES" -> topping = Topping.TOMATOES;
+                case "JALEPENOS" -> topping = Topping.JALEPENOS;
+                case "CUCUMBERS" -> topping = Topping.CUCUMBERS;
+                case "PICKLES" -> topping = Topping.PICKLES;
+                case "GUACAMOLE" -> topping = Topping.GUACAMOLE;
+                case "MUSHROOMS" -> topping = Topping.MUSHROOMS;
+                case "STEAK" -> topping = Topping.STEAK;
+                case "HAM" -> topping = Topping.HAM;
+                case "SALAMI" -> topping = Topping.SALAMI;
+                case "ROAST BEEF" -> topping = Topping.ROAST_BEEF;
+                case "CHICKEN" -> topping = Topping.CHICKEN;
+                case "BACON" -> topping = Topping.BACON;
+                case "AMERICAN CHEESE" -> topping = Topping.AMERICAN_CHEESE;
+                case "PROVOLONE CHEESE" -> topping = Topping.PROVOLONE_CHEESE;
+                case "CHEDDAR CHEESE" -> topping = Topping.CHEDDAR_CHEESE;
+                case "SWISS CHEESE" -> topping = Topping.SWISS_CHEESE;
+                default -> {
+                    System.out.println(ColorCodes.TEXT_RED + "\nInvalid topping choice: " + toppingName + ColorCodes.ANSI_RESET);
                     continue;
+                }
             }
             sandwich.addTopping(topping);
         }
@@ -184,46 +199,67 @@ public class OrderScreen {
         for (String sauceName : saucesArray) {
             SauceType sauceType;
             switch (sauceName.toUpperCase()) {
-                case "MAYO":
-                    sauceType = SauceType.MAYO;
-                    break;
-                case "MUSTARD":
-                    sauceType = SauceType.MUSTARD;
-                    break;
-                case "KETCHUP":
-                    sauceType = SauceType.KETCHUP;
-                    break;
-                case "RANCH":
-                    sauceType = SauceType.RANCH;
-                    break;
-                case "THOUSAND ISLANDS":
-                    sauceType = SauceType.THOUSAND_ISLANDS;
-                    break;
-                case "VINAIGRETTE":
-                    sauceType = SauceType.VINAIGRETTE;
-                    break;
-                default:
-                    System.out.println(ColorCodes.TEXT_RED+"\nInvalid sauce choice: " + sauceName+ColorCodes.ANSI_RESET);
+                case "MAYO" -> sauceType = SauceType.MAYO;
+                case "MUSTARD" -> sauceType = SauceType.MUSTARD;
+                case "KETCHUP" -> sauceType = SauceType.KETCHUP;
+                case "RANCH" -> sauceType = SauceType.RANCH;
+                case "THOUSAND ISLANDS" -> sauceType = SauceType.THOUSAND_ISLANDS;
+                case "VINAIGRETTE" -> sauceType = SauceType.VINAIGRETTE;
+                default -> {
+                    System.out.println(ColorCodes.TEXT_RED + "\nInvalid sauce choice: " + sauceName + ColorCodes.ANSI_RESET);
                     continue;
+                }
             }
             Sauce sauce = new Sauce(sauceType.getName());
             sandwich.addSauce(sauce);
         }
 
+        // Add extra cheese if selected
+        if (extraCheese) {
+            Topping extraCheeseTopping = Topping.EXTRA_CHEESE;
+            sandwich.addTopping(extraCheeseTopping);
+        }
+
+        // Add extra meat if selected
+        if (extraMeat) {
+            Topping extraMeatTopping = Topping.EXTRA_MEAT;
+            sandwich.addTopping(extraMeatTopping);
+        }
+
+        // Add sides if selected
+        if (addSides) {
+            System.out.print(ColorCodes.ANSI_PINK+"\nEnter side options:\n" +
+                    "(Separate with comma,)\n" +ColorCodes.ANSI_RESET+ColorCodes.ANSI_YELLOW+
+                    "- SAUCE\n" +
+                    "- AU JUS\n"+ColorCodes.ANSI_RESET);
+            String sidesInput = scanner.nextLine();
+            String[] sidesArray = sidesInput.split(",");
+            for (String sideName : sidesArray) {
+                SauceType sideType;
+                switch (sideName.toUpperCase()) {
+                    case "SAUCE" -> sideType = SauceType.SIDE_SAUCE;
+                    case "AU JUS" -> sideType = SauceType.SIDE_AU_JUS;
+                    default -> {
+                        System.out.println("Invalid side choice: " + sideName);
+                        continue;
+                    }
+                }
+                Sauce side = new Sauce(sideType.getName());
+                sandwich.addSauce(side);
+            }
+        }
         // Add the sandwich to the order
         order.addOrderable(sandwich);
 
-        System.out.println(ColorCodes.TEXT_PURPLE+"\nSandwich added to the order."+ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.TEXT_PURPLE + "\nSandwich added to the order." + ColorCodes.ANSI_RESET);
     }
-
-
 
 
     private void addDrink() {
         Scanner scanner = new Scanner(System.in);
 
         // Prompt the user for drink details
-        System.out.println(ColorCodes.TEXT_CYAN+"Add Drink");
+        System.out.println(ColorCodes.TEXT_CYAN + "Add Drink");
         System.out.println("\nSelect drink type (1. Soda, 2. Water, 3. Juice, 4. Tea, 5. Coffee): ");
         int typeChoice = scanner.nextInt();
         scanner.nextLine();
@@ -251,7 +287,7 @@ public class OrderScreen {
                 type = DrinkType.COFFEE;
                 break;
             default:
-                System.out.println(ColorCodes.TEXT_RED+"\nInvalid type choice. Drink not added."+ColorCodes.ANSI_RESET);
+                System.out.println(ColorCodes.TEXT_RED + "\nInvalid type choice. Drink not added." + ColorCodes.ANSI_RESET);
                 return;
         }
 
@@ -267,7 +303,7 @@ public class OrderScreen {
                 size = DrinkSize.LARGE;
                 break;
             default:
-                System.out.println(ColorCodes.TEXT_RED+"\nInvalid size choice. Drink not added."+ColorCodes.ANSI_RESET);
+                System.out.println(ColorCodes.TEXT_RED + "\nInvalid size choice. Drink not added." + ColorCodes.ANSI_RESET);
                 return;
         }
 
@@ -276,16 +312,15 @@ public class OrderScreen {
         // Add the drink to the order
         order.addOrderable(drink);
 
-        System.out.println(ColorCodes.TEXT_PURPLE+"\nDrink added to the order."+ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.TEXT_PURPLE + "\nDrink added to the order." + ColorCodes.ANSI_RESET);
     }
-
 
 
     private void addChips() {
         Scanner scanner = new Scanner(System.in);
 
         // Prompt the user for chip details
-        System.out.println(ColorCodes.ANSI_PINK+"Add Chips");
+        System.out.println(ColorCodes.ANSI_PINK + "Add Chips");
         System.out.println("\nSelect chip type (1. Regular, 2. BBQ, 3. Sour Cream & Onion, 4. Salted, 5. Cheese, 6. Spicy): ");
         int chipChoice = scanner.nextInt();
         scanner.nextLine();
@@ -312,7 +347,7 @@ public class OrderScreen {
                 chipType = ChipType.SPICY;
                 break;
             default:
-                System.out.println(ColorCodes.TEXT_RED+"\nInvalid chip choice. Chips not added."+ColorCodes.ANSI_RESET);
+                System.out.println(ColorCodes.TEXT_RED + "\nInvalid chip choice. Chips not added." + ColorCodes.ANSI_RESET);
                 return;
         }
         Chip chips = new Chip(chipType);
@@ -320,15 +355,15 @@ public class OrderScreen {
         // Add the chips to the order
         order.addOrderable(chips);
 
-        System.out.println(ColorCodes.TEXT_PURPLE+"\nChips added to the order."+ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.TEXT_PURPLE + "\nChips added to the order." + ColorCodes.ANSI_RESET);
     }
 
     private void checkout() {
-        System.out.println(ColorCodes.TEXT_CYAN+"\n*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= Checkout =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* "+ColorCodes.ANSI_RESET);
-        System.out.println(ColorCodes.ANSI_YELLOW+"Order Details:"+ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.TEXT_CYAN + "\n*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= Checkout =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* " + ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.ANSI_YELLOW + "Order Details:" + ColorCodes.ANSI_RESET);
 
         // Debugging statements
-        System.out.println(ColorCodes.TEXT_YELLOW+"\nNumber of items in the order: " + order.getItems().size());
+        System.out.println(ColorCodes.TEXT_YELLOW + "\nNumber of items in the order: " + order.getItems().size());
         for (OrderableItem item : order.getItems()) {
             System.out.println(item.getOrderDetails());
         }
@@ -337,7 +372,7 @@ public class OrderScreen {
 
         // Perform any additional checkout logic, such as payment processing or generating a receipt file
 
-        System.out.println(ColorCodes.TEXT_RED+"\nThank you for your order!"+ColorCodes.ANSI_RESET);
+        System.out.println(ColorCodes.TEXT_RED + "\nThank you for your order!" + ColorCodes.ANSI_RESET);
 
         String folderPath = "ReceiptsFolder";
         String receiptContent = order.getReceipt(); // Replace with the actual receipt content
