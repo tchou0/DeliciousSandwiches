@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3292681e-fe85-4824-b3d7-1b8d05f60ae8" name="Changes" comment="updated code">
-      <change afterPath="$PROJECT_DIR$/ReceiptsFolder/receipt-20230601-100440.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptsFolder/receipt-20230601-101528.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptsFolder/receipt-20230601-101644.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptsFolder/receipt-20230601-101712.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptsFolder/receipt-20230601-102048.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptsFolder/receipt-20230601-102112.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptsFolder/receipt-20230601-102625.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptsFolder/receipt-20230601-103254.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptsFolder/receipt-20230601-103402.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptsFolder/receipt-20230601-104508.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptsFolder/receipt-20230601-111649.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptsFolder/receipt-20230601-113114.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/OrderScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/OrderScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ReceiptManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ReceiptManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/ReceiptManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/ReceiptManager.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +190,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685641147276</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="updated code">
+      <created>1685642645931</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1685642645931</updated>
+    </task>
+    <task id="LOCAL-00017" summary="updated code">
+      <created>1685643820889</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1685643820890</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

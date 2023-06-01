@@ -352,7 +352,7 @@ public class OrderScreen {
         System.out.println(ColorCodes.TEXT_PURPLE + "\nChips added to the order." + ColorCodes.ANSI_RESET);
     }
 
-    private void checkout() {
+    public boolean checkout() {
         System.out.println(ColorCodes.TEXT_CYAN + "\n*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= Checkout =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* " + ColorCodes.ANSI_RESET);
         System.out.println(ColorCodes.ANSI_YELLOW + "Order Details:" + ColorCodes.ANSI_RESET);
 
