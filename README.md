@@ -1,18 +1,16 @@
 # DELI-cious Sandwiches Application
 
-The DELI-cious Point of Sales Application is a custom sandwich shop's solution for automating their order process.
-DELI-cious currently manages orders manually on paper, but this application aims to streamline the process and make it available online in the future.
+The DELI-cious Sandwiches Application is a custom sandwich shop's solution for automating their order process.
+This application aims to makes online ordering easier for the deli shop.
 
 
 ## Application Overview
 
-The DELI-cious Point of Sales Application is a simple solution designed for a custom sandwich shop. It automates the order process and provides a convenient way for customers to place their sandwich orders.
+The DELI-cious Sandwiches Application is a simple application designed for a custom sandwich shop. It automates the ordering process and provides a convenient way for customers to place their sandwich orders online.
 
-Customers can choose the size of their sandwich (4", 8", or 12") and select from different bread types (white, wheat, rye, or wrap). They can customize their sandwich by adding regular toppings like lettuce, peppers, onions, tomatoes, and more, as well as premium toppings such as meats and cheeses (e.g., steak, ham, cheddar, swiss). Extra toppings come at an additional cost.
+Customers can choose the size of their sandwich (4", 8", or 12") and select from different bread types (white, wheat, rye, or wrap). They can customize their sandwich by adding regular toppings like lettuce, peppers, onions, tomatoes, and more, as well as other toppings such as meats and cheeses (e.g., steak, ham, cheddar, swiss). Extra toppings come at an additional cost.
 
 Additionally, customers can specify if they want their sandwich toasted and add drinks and chips to their order. Once the order is completed, the application displays the order details, including the list of sandwiches with toppings and the total cost. The order details are saved as a receipt file with a timestamp in the receipts folder.
-
-The application aims to improve efficiency and enhance the customer experience at DELI-cious by automating the order process and ensuring accurate customization of sandwiches.
 
 ### Home Screen
 The home screen provides the following options:
@@ -20,10 +18,10 @@ The home screen provides the following options:
 - Place a new order: Start a new order
 - Exit: Exit the Application
 
-The application continues to run until the user chooses to exit.
+The application continues to run on a loop until the user chooses to exit.
 
 ### Order Screen
-The order screen displays the entries in reverse chronological order (newest entries first) and provides the following options:
+The order screen displays the entries and provides the following options:
 
 - Add Sandwich: Add a new sandwich to the order.
 - Add Drink: Add a drink to the order.
